@@ -10,9 +10,9 @@
 
 ;(function($) {
 
-  $.fn.unveil = function(threshold, callback) {
+  $.fn.unveil = function(threshold,container,callback) {
 
-    var $w = $(window),
+    var $w = container || $(window),
         th = threshold || 0,
         retina = window.devicePixelRatio > 1,
         attrib = retina? "data-src-retina" : "data-src",
